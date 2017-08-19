@@ -3,10 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.dmerkushov</groupId>
     <artifactId>signals4j</artifactId>
-    <version>0.3</version>
+    <version>0.3.1</version>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
+			<scope>test</scope>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
