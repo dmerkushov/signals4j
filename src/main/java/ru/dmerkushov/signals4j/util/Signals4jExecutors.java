@@ -15,41 +15,23 @@
  */
 package ru.dmerkushov.signals4j.util;
 
-import java.util.Objects;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
- * After Pshemo in
+ * After Marco13 in
  * https://stackoverflow.com/questions/13883293/turning-an-executorservice-to-daemon-in-java
  *
  * @author Dmitriy Merkushov <d.merkushov@gmail.com>
  */
-public class Signals4jThreadFactory implements ThreadFactory {
+public class Signals4jExecutors {
 
-	public final String prefix;
-	public final boolean daemon;
-	ThreadFactory inner = Executors.defaultThreadFactory ();
-
-	public Signals4jThreadFactory (String prefix, boolean daemon) {
-		Objects.requireNonNull (prefix, "prefix");
-
-		this.prefix = prefix;
-		this.daemon = daemon;
-	}
-
-	public Signals4jThreadFactory (String prefix) {
-		this (prefix, true);
-	}
-
-	@Override
-	public Thread newThread (Runnable r) {
-		Thread t = inner.newThread (r);
-
-		t.setName (prefix + t.getName ());
-		t.setDaemon (daemon);
-
-		return t;
+	public static ExecutorService createFixedTimeoutExecutorService (String threadNamePrefix, int threadPoolCount, long keepAlive, TimeUnit timeUnit) {
+		ThreadPoolExecutor e = new ThreadPoolExecutor (threadPoolCount, threadPoolCount, keepAlive, timeUnit, new LinkedBlockingQueue<> (), new Signals4jThreadFactory (threadNamePrefix, false));
+		e.allowCoreThreadTimeOut (true);
+		return e;
 	}
 
 }
