@@ -18,10 +18,10 @@ package ru.dmerkushov.signals4j;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.prefs.Preferences;
+import ru.dmerkushov.signals4j.util.Signals4jThreadFactory;
 
 /**
  *
@@ -46,7 +46,7 @@ class SlotExecutor {
 	private SlotExecutor () {
 		int threadCount = Preferences.userNodeForPackage (SlotExecutor.class).getInt ("THREAD_COUNT", THREAD_COUNT_DEFAULT);
 
-		service = Executors.newFixedThreadPool (threadCount);
+		service = Executors.newFixedThreadPool (threadCount, new Signals4jThreadFactory ("SlotExecutorService-"));
 	}
 
 	Future submit (final Slot slot, final Signal signal) {
@@ -61,19 +61,4 @@ class SlotExecutor {
 
 		return f;
 	}
-
-	@Override
-	protected void finalize () throws Throwable {
-		long shutdownTimeout = Preferences.userNodeForPackage (SlotExecutor.class).getLong ("THREAD_SHUTDOWN_TIMEOUT_SECONDS", THREAD_SHUTDOWN_TIMEOUT_SECONDS);
-
-		service.shutdownNow ();
-		try {
-			service.awaitTermination (shutdownTimeout, TimeUnit.SECONDS);
-		} catch (InterruptedException ex) {
-			Logger.getLogger (SlotExecutor.class.getName ()).log (Level.SEVERE, null, ex);
-		}
-
-		super.finalize ();
-	}
-
 }
