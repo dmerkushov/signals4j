@@ -105,7 +105,7 @@ public class Signals4jTest {
 		signal.emit ();
 
 		try {
-			Thread.sleep (800L);
+			Thread.sleep (3000L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
@@ -138,7 +138,7 @@ public class Signals4jTest {
 		signal.emit ();
 
 		try {
-			Thread.sleep (300L);
+			Thread.sleep (3000L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
