@@ -31,7 +31,6 @@ class SignalQueueCheckRunnable implements Runnable {
 
 		SignalQueue q = SignalQueue.getInstance ();
 		SignalSlotMap m = SignalSlotMap.getInstance ();
-		SlotExecutor slotExecutor = SlotExecutor.getInstance ();
 
 		while (true) {
 			while (q.isEmpty ()) {
@@ -61,7 +60,7 @@ class SignalQueueCheckRunnable implements Runnable {
 					while (slotIter.hasNext ()) {
 						Slot slot = slotIter.next ();
 						if (slot != null) {
-							slotExecutor.submit (slot, signal);
+							SlotExecutor.getInstance ().submit (slot, signal);
 						}
 					}
 				}
