@@ -47,7 +47,7 @@ public class Signals4jTest {
 	 * Check that an emitted signal starts a slot
 	 */
 	@Test
-	public void testSingleSlotSignal () {
+	public void simpleSignal () {
 		Signal signal = new Signal () {
 		};
 
@@ -66,7 +66,7 @@ public class Signals4jTest {
 		signal.emit ();
 
 		try {
-			Thread.sleep (100L);
+			Thread.sleep (300L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
@@ -105,7 +105,7 @@ public class Signals4jTest {
 		signal.emit ();
 
 		try {
-			Thread.sleep (100L);
+			Thread.sleep (300L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
@@ -138,7 +138,7 @@ public class Signals4jTest {
 		signal.emit ();
 
 		try {
-			Thread.sleep (100L);
+			Thread.sleep (300L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
@@ -171,7 +171,7 @@ public class Signals4jTest {
 		signal.emit ();
 
 		try {
-			Thread.sleep (100L);
+			Thread.sleep (300L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
@@ -236,110 +236,4 @@ public class Signals4jTest {
 
 		Assert.assertArrayEquals (expected, result);
 	}
-
-//	@Test
-//	public void createSignal () {
-//
-//		Signal signal = new Signal () {
-//		};
-//
-//		Slot slot = new Slot () {
-//
-//			@Override
-//			public void threadsafeHandle (Signal signal) throws SlotException {
-//				System.out.println ("Slot on a signal: " + signal);
-//				phases[0] = true;
-//			}
-//		};
-//
-//		slot.connect (Signal.class);
-//
-//		signal.emit ();
-//
-//		try {
-//			Thread.sleep (100L);
-//		} catch (InterruptedException ex) {
-//			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
-//		}
-//
-//		slot.disconnect (signal.getClass ());
-//
-//		slot = new Slot () {
-//
-//			@Override
-//			public void threadsafeHandle (Signal signal) throws SlotException {
-//				System.out.println ("Slot on a signal: " + signal);
-//				phases[1] = false;
-//			}
-//		};
-//
-//		slot.connect (signal);
-//		slot.disconnect (signal);
-//
-//		phases[1] = true;
-//
-//		signal.emit ();
-//
-//		try {
-//			Thread.sleep (100L);
-//		} catch (InterruptedException ex) {
-//			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
-//		}
-//
-//		for (int i = 0; i < phases.length; i++) {
-//			Assert.assertTrue ("assertion on phase " + i, phases[i]);
-//		}
-//
-//		Signal signal1 = new Signal () {
-//		};
-//
-//		Slot slot1 = new Slot () {
-//
-//			@Override
-//			public void threadsafeHandle (Signal signal) throws SlotException {
-//			}
-//		};
-//
-//		slot1.connect (signal1);
-//
-//		Slot slot2 = new Slot () {
-//
-//			@Override
-//			public void threadsafeHandle (Signal signal) throws SlotException {
-//			}
-//		};
-//
-//		slot2.connect (signal1.getClass ());
-//
-//		Assert.assertEquals (2, Signals4j.getInstance ().getSlotCount (signal1));
-//		Assert.assertEquals (2, Signals4j.getInstance ().getSlotCount (signal1.getClass ()));
-//
-//		SignalSlotMap.getInstance ().disconnect (signal1, slot1);
-//
-//		Assert.assertEquals (1, signal1.getSlotCount ());
-//		signal1.disconnectAll ();
-//
-//		Assert.assertEquals (0, signal1.getSlots ().size ());
-//
-//		slot1.connect (signal1.getClass ());
-//		slot2.connect (signal1.getClass ());
-//		slot1.connect (signal1.getClass ());
-//
-//		Assert.assertEquals (2, signal1.getSlotCount ());
-//
-//		LinkedHashSet<Slot> expected = new LinkedHashSet<> ();
-//		expected.add (slot2);
-//		expected.add (slot1);
-//
-//		Assert.assertEquals (expected, signal1.getSlots ());
-//		Assert.assertEquals (expected, Signals4j.getInstance ().getSlots (signal1.getClass ()));
-//
-//		Signals4j.getInstance ().disconnectAll (signal1.getClass ());
-//		Assert.assertEquals (new LinkedHashSet<> (), Signals4j.getInstance ().getSlots (signal1.getClass ()));
-//
-//		Signal signal2 = new Signal () {
-//		};
-//
-//		Assert.assertEquals (0, signal2.getSlotCount ());
-//	}
 }
