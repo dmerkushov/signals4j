@@ -109,161 +109,193 @@ public class Signals4jTest {
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.print (".");
 		try {
 			Thread.sleep (100L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
+		System.out.println (".");
 
 		boolean[] expected = {true, true};
 
