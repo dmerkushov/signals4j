@@ -138,7 +138,7 @@ public class Signals4jTest {
 		signal.emit ();
 
 		try {
-			Thread.sleep (3000L);
+			Thread.sleep (600L);
 		} catch (InterruptedException ex) {
 			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
 		}
