@@ -15,6 +15,9 @@
  */
 package ru.dmerkushov.signals4j;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
@@ -29,6 +32,7 @@ import ru.dmerkushov.signals4j.util.Signals4jExecutors;
  */
 class SlotExecutor {
 
+	Set<Thread> slotExecutorThreads = Collections.synchronizedSet (new HashSet<Thread> ());
 	private ExecutorService service;
 	public static final int THREAD_COUNT_DEFAULT = 1;
 	public static final long THREAD_SHUTDOWN_TIMEOUT_SECONDS = 10L;
@@ -53,11 +57,13 @@ class SlotExecutor {
 
 	Future submit (final Slot slot, final Signal signal) {
 		Future f = service.submit (() -> {
+			slotExecutorThreads.add (Thread.currentThread ());
 			try {
 				slot.threadsafeHandle (signal);
 			} catch (SlotException ex) {
 				Logger.getLogger (SignalQueueCheckRunnable.class.getName ()).log (Level.SEVERE, "Error while handling signal with slot.\nSignal: " + signal + "\nSlot: " + slot, ex);
 			}
+			slotExecutorThreads.remove (Thread.currentThread ());
 		});
 		Logger.getLogger (SignalQueueCheckRunnable.class.getName ()).log (Level.FINEST, "Future object for the submitted slot execution: {0}", f);
 

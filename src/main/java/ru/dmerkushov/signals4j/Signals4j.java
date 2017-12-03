@@ -180,4 +180,8 @@ public final class Signals4j {
 		return SignalSlotMap.getInstance ().getSlotCount (signal);
 	}
 
+	public boolean isOnSlotExecutionThread () {
+		return SlotExecutor.getInstance ().slotExecutorThreads.contains (Thread.currentThread ());
+	}
+
 }

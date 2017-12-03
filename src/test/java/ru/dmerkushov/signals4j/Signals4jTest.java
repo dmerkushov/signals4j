@@ -236,4 +236,35 @@ public class Signals4jTest {
 
 		Assert.assertArrayEquals (expected, result);
 	}
+
+	@Test
+	public void testIsOnExecutionThread () {
+		Signal signal = new Signal () {
+		};
+
+		final boolean[] result = {false, true};
+
+		Slot slot = new Slot () {
+			@Override
+			public void threadsafeHandle (Signal signal) throws SlotException {
+				result[0] = Signals4j.getInstance ().isOnSlotExecutionThread ();
+			}
+		};
+
+		result[1] = Signals4j.getInstance ().isOnSlotExecutionThread ();
+
+		Signals4j.getInstance ().connect (signal, slot);
+
+		signal.emit ();
+
+		try {
+			Thread.sleep (300L);
+		} catch (InterruptedException ex) {
+			Logger.getLogger (Signals4jTest.class.getName ()).log (Level.SEVERE, null, ex);
+		}
+
+		boolean[] expected = {true, false};
+
+		Assert.assertArrayEquals (expected, result);
+	}
 }
